@@ -345,6 +345,32 @@ svg {
   color: #416a59;
 }
 
+/* -- section three -- */
+
+.section-three {
+  background-color: #f5eec2;
+  padding: 5em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.section-three-article-title {
+  line-height: 1.2;
+  color: #303030;
+}
+
+.section-three-article-title-text {
+  margin-block: 1em;
+  color: #505050;
+}
+
+.section-three-article-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* 
 ============ media queries ============
 */
@@ -407,12 +433,18 @@ svg {
     margin-bottom: 0;
   }
 
-  .section-two {
+  .section-two,
+  .section-three {
     flex-direction: row;
   }
 
-  .section-two-article-container {
+  .section-two-article-container,
+  .section-three-article-container {
     align-self: center;
+  }
+
+  .article-image {
+    order: -3;
   }
 
 }
