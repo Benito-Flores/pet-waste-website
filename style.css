@@ -1,0 +1,296 @@
+/* 
+============ global ============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.current {
+  border-bottom: 3px solid #f5eec2;
+  pointer-events: none;
+}
+
+.body-header,
+.main,
+.body-footer {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.body-header-links {
+  transition: .5s;
+}
+
+.body-header-links:hover,
+.body-header-links:focus {
+  opacity: .8;
+}
+
+/* 
+============ colors ============
+*/
+
+.yellow-c {
+  color: #f5eec2;
+}
+
+.dgreen-c {
+  color: #416a59;
+}
+
+.blue-c {
+  color: #39395f;
+}
+
+.green-c {
+  color: #73a24e;
+}
+
+.lgreen-c {
+  color: #a9c25d;
+}
+
+.yellow-bc {
+  background-color: #f5eec2;
+}
+
+.dgreen-bc {
+  background-color: #416a59;
+}
+
+.blue-bc {
+  background-color: #39395f;
+}
+
+.green-bc {
+  background-color: #73a24e;
+}
+
+.lgreen-bc {
+  background-color: #a9c25d;
+}
+
+/* 
+============ typography ============
+*/
+
+body {
+  line-height: 1.6;
+  font-size: 1rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.small-font {
+  font-size: .6rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+/* 
+============ body header ============
+*/
+
+.body-header {
+  background-color: #416a59;
+  color: #f5eec2;
+  padding-block: 1em;
+}
+
+.body-header-title {
+  text-align: center;
+  line-height: 1em;
+  margin-bottom: .5em;
+}
+
+.link-container {
+  justify-content: space-evenly;
+  font-weight: 500;
+}
+
+/* 
+============ mobile banner ============
+*/
+
+.mobile-banner {
+  justify-content: center;
+  color: #ffffff;
+}
+
+.mobile-banner-link-call,
+.mobile-banner-link-email {
+  text-align: center;
+  width: 100%;
+  padding-block: .5em;
+}
+
+.mobile-banner-link-call {
+  background-color: #39395f;
+  transition: .5s;
+}
+
+.mobile-banner-link-call:hover,
+.mobile-banner-link-call:focus {
+  background-color: #a9c25d;
+}
+
+.mobile-banner-link-email {
+  background-color: #a9c25d;
+  transition: .5s;
+}
+
+.mobile-banner-link-email:hover,
+.mobile-banner-link-email:focus {
+  background-color: #39395f;
+}
+
+/* 
+============ main ============
+*/
+
+/* -- splash page -- */
+
+.splash-page-title-tex,
+.splash-page-call-us,
+.splash-page-number {
+  line-height: 1em;
+}
+
+.splash-page-container {
+  background-image: url(./img/home-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #dad3ab;
+  background-blend-mode: multiply;
+}
+
+.splash-page-content-container {
+  text-align: center;
+  margin: 5em .5em;
+}
+
+.splash-page-title {
+  color: #202020;
+  line-height: 1.25em;
+  margin-bottom: .5em;
+}
+
+.splash-page-title-text {
+  color: #f5eec2;
+  margin-bottom: 1em;
+}
+
+.splash-page-call-us {
+  margin-bottom: .5em;
+}
+
+.splash-page-call-us {
+  color: #202020;
+}
+
+.splash-page-call-us,
+.splash-page-number {
+  display: none;
+}
+
+/* 
+============ media queries ============
+*/
+
+@media (min-width: 700px) {
+
+  /* -- body header -- */
+
+  .body-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5em;
+  }
+
+  .body-header-title {
+    margin-bottom: 0;
+  }
+
+  .link-container {
+    gap: 5em;
+  }
+
+  .mobile-banner {
+    display: none;
+  }
+
+}
+
+@media (min-width: 900px) {
+
+  .splash-page-container {
+    background-image: url(./img/home-background.png);
+    background-position: left;
+  }
+
+  .splash-page-content-container {
+    margin-left: auto;
+    width: 50%;
+    padding-inline: 2em;
+    max-width: 40em;
+  }
+
+  .splash-page-title-text,
+  .splash-page-call-us {
+    color:#39395f
+  }
+
+  .splash-page-call-us,
+  .splash-page-number {
+    display: block;
+  }
+
+}
